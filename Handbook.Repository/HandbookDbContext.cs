@@ -10,13 +10,6 @@ public class HandbookDbContext : DbContext
 
     }
 
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        base.OnModelCreating(modelBuilder);
-
-        model
-    }
-
     public DbSet<City> Cities { get; set; }
     public DbSet<Person> Persons { get; set; }
     public DbSet<Phone> Phones { get; set; }

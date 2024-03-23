@@ -7,9 +7,9 @@ public class Phone
     [Key, Required]
     public string Id { get; set; } = null!;
 
-    [Required, MaxLength(15)]
-    public string PhoneNumber { get; set; } = null!;
-    public PhoneType Type { get; set; }
+    [Required, MaxLength(50)]
+    public string ContactInformation { get; set; } = null!;
+    public ContactType Type { get; set; }
     public DateTime CreateDate { get; set; }
     public bool IsDeleted { get; set; }
 
@@ -20,9 +20,13 @@ public class Phone
     }
 }
 
-public enum PhoneType
+public enum ContactType
 {
-    Mobile = 0,
-    Office = 1,
-    Home = 2,
+    MobilePhone = 0,
+    OfficePhone = 1,
+    HomePhone = 2,
+    Email = 3,
+    WorkAddress = 4,
+    HomeAddress = 5,
+    Other = 6,
 }

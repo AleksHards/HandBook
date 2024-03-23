@@ -5,7 +5,7 @@ namespace Handbook.DTO;
 public class Person
 {
     [Key, Required]
-    public int Id {  get; set; } = null!;
+    public int Id {  get; set; }
 
     [Required, MaxLength(30)]
     public string FirstName { get; set; } = null!;
