@@ -2,7 +2,7 @@
 
 namespace Handbook.Service.RepositoryInterfaces;
 
-public interface IPhoneRepository : IRepositoryBase<Phone>
+public interface IContactRepository : IRepositoryBase<Contact>
 {
 
 }

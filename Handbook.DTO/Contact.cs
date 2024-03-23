@@ -2,22 +2,14 @@
 
 namespace Handbook.DTO;
 
-public class Phone
+public class Contact
 {
-    [Key, Required]
     public string Id { get; set; } = null!;
-
-    [Required, MaxLength(50)]
     public string ContactInformation { get; set; } = null!;
     public ContactType Type { get; set; }
     public DateTime CreateDate { get; set; }
     public bool IsDeleted { get; set; }
-
-    public Phone()
-    {
-        this.CreateDate = DateTime.Now;
-        this.IsDeleted = false;
-    }
+    public Person? Person { get; set; }
 }
 
 public enum ContactType

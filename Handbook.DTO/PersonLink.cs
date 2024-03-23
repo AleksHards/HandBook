@@ -4,15 +4,9 @@ namespace Handbook.DTO;
 
 public class PersonLink
 {
-    [Key, Required]
     public int Id { get; set; }
-
-    [Required]
     public Person Person { get; set; } = null!;
-
-    [Required]
     public Person Relative { get; set; } = null!;
-
     public RelationType Type { get; set; }
 }
 

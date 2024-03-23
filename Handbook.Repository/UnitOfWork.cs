@@ -8,7 +8,7 @@ namespace Handbook.Repository
         private readonly Lazy<ICityRepository> _cityRepository;
         private readonly Lazy<IPersonRepository> _personRepository;
         private readonly Lazy<IPersonLinkRepository> _personLinkRepository;
-        private readonly Lazy<IPhoneRepository> _phoneRepository;
+        private readonly Lazy<IContactRepository> _ContactRepository;
 
         public UnitOfWork(HandbookDbContext context)
         {
@@ -16,7 +16,7 @@ namespace Handbook.Repository
             _cityRepository = new Lazy<ICityRepository>(() => new CityRepository(context));
             _personRepository = new Lazy<IPersonRepository>(() => new PersonRepository(context));
             _personLinkRepository = new Lazy<IPersonLinkRepository>(() => new PersonLinkRepository(context));
-            _phoneRepository = new Lazy<IPhoneRepository>(() => new PhoneRepository(context));
+            _ContactRepository = new Lazy<IContactRepository>(() => new ContactRepository(context));
         }
 
         public ICityRepository CityRepository => _cityRepository.Value;
@@ -25,7 +25,7 @@ namespace Handbook.Repository
 
         public IPersonRepository PersonRepository => _personRepository.Value;
 
-        public IPhoneRepository PhoneRepository => _phoneRepository.Value;
+        public IContactRepository ContactRepository => _ContactRepository.Value;
 
         public int SaveChanges() => _context.SaveChanges();
 

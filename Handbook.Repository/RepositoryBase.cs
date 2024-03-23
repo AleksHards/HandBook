@@ -4,7 +4,6 @@ using System.Linq.Expressions;
 
 namespace Handbook.Repository;
 
-
 internal abstract class RepositoryBase<T> : IRepositoryBase<T> where T : class
 {
     protected readonly HandbookDbContext _context;
