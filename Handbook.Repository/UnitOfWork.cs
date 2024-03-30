@@ -2,7 +2,7 @@
 
 namespace Handbook.Repository
 {
-    internal class UnitOfWork: IUnitOfWork
+    public class UnitOfWork: IUnitOfWork
     {
         private readonly HandbookDbContext _context;
         private readonly Lazy<ICityRepository> _cityRepository;

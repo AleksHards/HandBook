@@ -5,8 +5,8 @@ namespace Handbook.DTO;
 public class PersonLink
 {
     public int Id { get; set; }
-    public Person Person { get; set; } = null!;
-    public Person Relative { get; set; } = null!;
+    public Person PersonFrom { get; set; } = null!;
+    public Person PersonTo { get; set; } = null!;
     public RelationType Type { get; set; }
 }
 
