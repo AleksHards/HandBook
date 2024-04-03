@@ -67,14 +67,12 @@ namespace Handbook.Repository.Migrations
                         name: "FK_PersonLinks_Persons_PersonFromId",
                         column: x => x.PersonFromId,
                         principalTable: "Persons",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_PersonLinks_Persons_PersonToId",
                         column: x => x.PersonToId,
                         principalTable: "Persons",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(

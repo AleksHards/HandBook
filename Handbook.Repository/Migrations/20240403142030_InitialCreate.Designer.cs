@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Handbook.Repository.Migrations
 {
     [DbContext(typeof(HandbookDbContext))]
-    [Migration("20240330105434_InitialCreate")]
+    [Migration("20240403142030_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -173,15 +173,15 @@ namespace Handbook.Repository.Migrations
             modelBuilder.Entity("Handbook.DTO.PersonLink", b =>
                 {
                     b.HasOne("Handbook.DTO.Person", "PersonFrom")
-                        .WithMany("PersonLink")
+                        .WithMany("PersonFrom")
                         .HasForeignKey("PersonFromId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Handbook.DTO.Person", "PersonTo")
-                        .WithMany()
+                        .WithMany("PersonTo")
                         .HasForeignKey("PersonToId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("PersonFrom");
@@ -198,7 +198,9 @@ namespace Handbook.Repository.Migrations
                 {
                     b.Navigation("Contacts");
 
-                    b.Navigation("PersonLink");
+                    b.Navigation("PersonFrom");
+
+                    b.Navigation("PersonTo");
                 });
 #pragma warning restore 612, 618
         }

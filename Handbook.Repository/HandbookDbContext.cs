@@ -35,8 +35,8 @@ public class HandbookDbContext : DbContext
         modelBuilder.Entity<Person>().Property(c => c.IsDeleted).HasColumnType("bit").HasDefaultValueSql("(0)");
         modelBuilder.Entity<Contact>().HasOne(p => p.Person).WithMany(c => c.Contacts).IsRequired(false);
 
-        modelBuilder.Entity<PersonLink>().HasOne(p => p.PersonFrom).WithMany(pl => pl.PersonFrom);
-        modelBuilder.Entity<PersonLink>().HasOne(p => p.PersonTo).WithMany(pl => pl.PersonTo);
+        modelBuilder.Entity<PersonLink>().HasOne(p => p.PersonFrom).WithMany(pl => pl.PersonFrom).OnDelete(DeleteBehavior.NoAction);
+        modelBuilder.Entity<PersonLink>().HasOne(p => p.PersonTo).WithMany(pl => pl.PersonTo).OnDelete(DeleteBehavior.NoAction);
     }
 
     public DbSet<City> Cities { get; set; }

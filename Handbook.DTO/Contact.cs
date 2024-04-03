@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Handbook.DTO;
+﻿namespace Handbook.DTO;
 
 public class Contact
 {

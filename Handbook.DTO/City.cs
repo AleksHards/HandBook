@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Runtime.CompilerServices;
-
-namespace Handbook.DTO;
+﻿namespace Handbook.DTO;
 
 public class City
 {
