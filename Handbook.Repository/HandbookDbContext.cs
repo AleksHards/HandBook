@@ -28,16 +28,15 @@ public class HandbookDbContext : DbContext
         modelBuilder.Entity<Person>().Property(p => p.IsDeleted).HasColumnType("bit").HasDefaultValueSql("(0)");
         modelBuilder.Entity<Person>().HasOne(ct => ct.City).WithMany(p => p.Persons).IsRequired(false);
         modelBuilder.Entity<Person>().HasMany(c => c.Contacts).WithOne(p => p.Person).IsRequired(false);
-        modelBuilder.Entity<Person>().HasMany(pl => pl.PersonLink).WithOne(p => p.PersonFrom);
-        modelBuilder.Entity<Person>().HasMany(pl => pl.PersonLink).WithOne(p => p.PersonTo);
+        modelBuilder.Entity<Person>().HasMany(pl => pl.PersonFrom).WithOne(p => p.PersonFrom);
 
         modelBuilder.Entity<Contact>().Property(c => c.ContactInformation).HasColumnType("nvarchar(30)").IsRequired();
         modelBuilder.Entity<Person>().Property(c => c.CreateDate).HasColumnType("date").HasDefaultValueSql("GetDate()");
         modelBuilder.Entity<Person>().Property(c => c.IsDeleted).HasColumnType("bit").HasDefaultValueSql("(0)");
         modelBuilder.Entity<Contact>().HasOne(p => p.Person).WithMany(c => c.Contacts).IsRequired(false);
 
-        modelBuilder.Entity<PersonLink>().HasOne(p => p.PersonFrom).WithMany(pl => pl.PersonLink);
-        modelBuilder.Entity<PersonLink>().HasOne(p => p.PersonTo).WithMany(pl => pl.PersonLink);
+        modelBuilder.Entity<PersonLink>().HasOne(p => p.PersonFrom).WithMany(pl => pl.PersonFrom);
+        modelBuilder.Entity<PersonLink>().HasOne(p => p.PersonTo).WithMany(pl => pl.PersonTo);
     }
 
     public DbSet<City> Cities { get; set; }

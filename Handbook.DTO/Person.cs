@@ -12,7 +12,8 @@ public class Person
     public DateTime DateOfBirth { get; set; }
     public City? City { get; set; }
     public ICollection<Contact>? Contacts { get; set; }
-    public ICollection<PersonLink>? PersonLink { get; set; }
+    public ICollection<PersonLink>? PersonFrom { get; set; }
+    public ICollection<PersonLink>? PersonTo { get; set; }
     public DateTime CreateDate { get; set; }
     public bool IsDeleted { get; set; }
 }
