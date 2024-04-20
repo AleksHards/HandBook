@@ -24,8 +24,4 @@
     <ProjectReference Include="..\Handbook.Service\Handbook.Service.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>
