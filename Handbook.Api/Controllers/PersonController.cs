@@ -1,6 +1,5 @@
 ﻿using Handbook.DTO;
 using Handbook.Model;
-using Handbook.Service;
 using Handbook.Service.ServiceInterfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -30,7 +29,7 @@ namespace Handbook.Api.Controllers
         }
 
         [HttpPost]
-        public Task CreatePerson(Person personModel) // TODO: აქ მოდელი უნდა გადმოიცეს.
+        public Task CreatePerson(PersonModel personModel)
         {
             _personService.AddPerson(new Person()
             {

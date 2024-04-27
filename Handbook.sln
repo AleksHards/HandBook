@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Handbook.Service", "Handboo
 		{2177A1EB-42F7-429A-893C-72760BA27520} = {2177A1EB-42F7-429A-893C-72760BA27520}
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HandBook.Model", "HandBook.Model\HandBook.Model.csproj", "{91B3BB10-8607-49CE-BDB1-D3D6F734D5D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Handbook.Model", "HandBook.Model\Handbook.Model.csproj", "{91B3BB10-8607-49CE-BDB1-D3D6F734D5D6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Handbook.Api", "Handbook.Api\Handbook.Api.csproj", "{8CBC6326-047F-406E-9E78-2B9A314FE113}"
 	ProjectSection(ProjectDependencies) = postProject
